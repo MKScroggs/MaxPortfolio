@@ -1,41 +1,150 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="bootstrap.css">  
-        <link rel="stylesheet" type="text/css" href="max.css">  
-        
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="max.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <!-- this is for quick testing, will remove when ready to move on with project-->
+        <style>
+            .nav-tabs > li {
+                float: none;
+                display: inline-block;
+                padding-left: 3em;
+                padding-right: 3em;
+            }
+            .nav-tabs {
+                text-align: center;
+            }
+            .container {
+                background-color:floralwhite
+            }
+            .fill {
+                min-height: 100%
+            }
+            html {
+                height: 100%;
+            }
+            body {
+                height: 100%;
+                background-color: black;
+            }
+            .portfolio-block {
+                border-width: 2px;
+                border-style: solid;
+                border-radius: 5px;
+                padding: 1em;
+                margin: 2em;
+            }
+            img {
+                width: 50%;
+                float: left;
+                height: auto;
+            }
+            .port-collapse-button {
+                
+            }
+            table {
+                width: 100%;
+            }
+        </style>
     </head>
     
     <body class="page">
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Balance Web Development</a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right now-red">
-                        <li><a href="#">About</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Design</a></li>
-                                <li><a href="#">Development</a></li>
-                                <li><a href="#">Consulting</a></li>
+        <div class="container fill">
+            <div class="page-header text-center">
+                <h1 class="centered">Maximilian Simnitt</h1>
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#portfolio">Portfolio</a></li>
+                    <li><a data-toggle="tab" href="#writing">Writing</a></li>
+                    <li><a data-toggle="tab" href="#ux">UX</a></li>
+                    <li><a data-toggle="tab" href="#about">About Me</a></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div id="portfolio" class="tab-pane fade in active">
+                    <h3>Portfolio</h3>
+                    <p>A portfolio would go here</p>
+                    
+                    <div class="portfolio-block">
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="testimage.png"\>
+                                </td>
+                                <td colspan=75%>
+                                    <h3>Hex Project</h3>
+                                    <p>I made hexagons from hexagons</p>
+                                    <button class="pull-right" data-toggle="collapse" data-target="#port1">See More</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                </td>
+                            </tr>
+                        </table>
+                        <div id="port1" class="collapse">
+                            
+                            <p>Cool things about Hexagons:</p>
+                            <ul>
+                                <li>They have 6 sides</li>
+                                <li>They tesselate</li>
+                                <li>They can be made with just a circle and a straight edge</li>
                             </ul>
-                        </li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-block">
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="testimage.png"\>
+                                </td>
+                                <td colspan=75%>
+                                    <h3>Hex Project 2</h3>
+                                    <p>I made more hexagons from hexagons</p>
+                                    <button class="pull-right" data-toggle="collapse" data-target="#port2">See More</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                </td>
+                            </tr>
+                        </table>
+                        <div id="port2" class="collapse">
+                            
+                            <p>Cool things about Hexagons:</p>
+                            <ul>
+                                <li>They have 6 sides</li>
+                                <li>They tesselate</li>
+                                <li>They can be made with just a circle and a straight edge</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="writing" class="tab-pane fade">
+                    <h3>Writing</h3>
+                    <p>Stories should go here perhaps</p>
+                </div>
+                <div id="ux" class="tab-pane fade">
+                    <h3>User Experience work</h3>
+                    <p>Any ux should go here</p>
+                </div>
+                <div id="about" class="tab-pane fade">
+                    <h3>About Me</h3>
+                    <p>My name is Max</p>
                 </div>
             </div>
-        </nav>
+        </div>
     </body>
 </html>
